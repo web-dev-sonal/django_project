@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="{% static '/css/home.css' %}"> -->
+    <title>{% block title %} {% endblock %}</title>
+    <style>
+        {% block css %}{
+	margin: 0;
+	padding: 0;
+}
+.services{
+    background-color:white;
+    background-size: 1000px;
+    background-position: center;
+}
+.services-heading{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.services-heading h2{
+    line-height: 55px;
+    font-size: 2.2rem;
+    color:#22252e;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0px;
+}
+.services-heading p{
+    font-size: 1rem;
+    color:#777474;
+    width:50%;
+}
+.box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 30px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:500px;
+    height: 400px;
+    text-align: center;
+    box-shadow: 2px 2px 20px rgba(90,118,253,0.15);
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 20px;
+    flex-grow: 1;
+}
+.box img{
+    height:150px;
+    margin:10px;
+
+}
+.box font{
+    font-size: 1.5rem;
+    color: #22252e;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.box p{
+    font-size: 1rem;
+    color: #777474;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+}
+.box a{
+    width:150px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #5a76fd;
+    text-transform: uppercase;
+    margin: auto;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color:#5a76fd;
+    margin:0px;
+    text-decoration: none;
+}
+.box a:hover{
+    background-color: #5a76fd;
+    color:#fff;
+    box-shadow: 5px 10px 30px rgba(90,118,253,0.5);
+    transition: all ease 0.3s;
+}
+
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+}
+header {
+	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.01)), url(https://previews.123rf.com/images/vectorkif/vectorkif1809/vectorkif180900019/110172927-people-of-different-professions-set-of-twenty-one-poses-with-cartoon-characters-of-various-occupatio.jpg);
+	height: 90vh;
+	-webkit-background-size: contain;
+	background-size: 500px;
+	background-position: center center;
+	position: relative;
+}
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+.logo {
+	float: left;
+    color: white;
+    margin-bottom: .5rem;
+    font-family: math;
+    font-weight: 500;
+    line-height: 2.2;
+    color: lightyellow;
+
+
+}
+
+.welcome-text {
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 20% 30%;
+	text-align: center;
+}
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 60px;
+}
+.welcome-text h1 span {
+	color: #00fecb;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color: #333;
+}
+/resposive/
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+
+
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}
+
+
+          .col-md-3
+          {
+          display: inline-block;
+          margin-left:-4px;
+          }
+
+          .carousel-indicators .active {
+          background-color: blue;
+            }
+
+          .col-md-3 img{
+
+          width: 210px;
+          height: 250px;
+          }
+
+          body .carousel-indicator li{
+          background-color: blue;
+          }
+
+          body .carousel-indicators{
+          bottom: -41px;
+          }
+
+          body .carousel-control-prev-icon,
+          body .carousel-control-next-icon{
+          background-color: blue;
+          }
+
+          .carousel-control-prev,
+          .carousel-control-next{
+          top: auto;
+          bottom: auto;
+          }
+           body .no-padding{
+           padding-left: 0,
+           padding-right: 0;
+           } {% endblock %}
+
+    </style>
+
+</head>
+
+<body>
+<!--{% load static %}-->
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <h1>EmployeeOrg</h1>
+        </div>
+<ul class="nav-area">
+<li><a href="#">Home</a></li>
+<li><a href="/home/about">About</a></li>
+<li><a href="/home/contact">Contact</a></li>
+<li><a href="/home/Login">Login</a></li>
+<li><a href="/home/Logout">Logout</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+        <h1><span>Home service</span></h1>
+<a href="#">Contact US</a>
+    </div>
+</header>
+
+<!--services----------------------->
+    <section class="services">
+        <!--heading----------->
+        <div class="services-heading">
+            <h2>Website Services Which We Provided.</h2>
+            <p>This site provide you an advance home service . You won't need to move anywhere everything will be at your door.</p>
+        </div>
+        <!--box-container----------------->
+        <div class="box-container">
+            <!--box-1-------->
+            <div class="box">
+                <img src="https://plumbingdownriver.com/wp-content/uploads/2020/01/Atlanta-Plumber.png">
+                <font>Driver</font>
+                <p>This site provide you an advance home service . You won't need to move anywhere everything will be at your door.</p>
+                <!--btn--------->
+                <a href="/home/driver/">View</a>
+            </div>
+            <!--box-2-------->
+            <div class="box">
+                <img src="https://i.pinimg.com/originals/da/d3/89/dad389739a782653d18a1408d3bb8353.png">
+                <font>home_servant</font>
+                <p>This site provide you an advance home service . You won't need to move anywhere everything will be at your door.</p>
+                <!--btn--------->
+                <a href="/home/servant">View</a>
+            </div>
+            <!--box-3-------->
+            <div class="box">
+                <img src="https://lh3.googleusercontent.com/proxy/p2ZIivtRza3OLOpxGAXhIWU3c96X4jANV1UmEIJtMZumdVHsiE5GVwOxmG2OKkhJkZBpiFnlOuSXu577DufcOPkkO6kAgPfij9BMAnP4okjWoXnPx-LDdKc5">
+                <font>Carpenters</font>
+                <p>This site provide you an advance home service . You won't need to move anywhere everything will be at your door.</p>
+                <!--btn--------->
+                <a href="/home/carpenter/">View</a>
+            </div>
+            <!--box-4-------->
+            <div class="box">
+                <img src="https://library.kissclipart.com/20180903/rsq/kissclipart-%D9%88%DA%A9%D8%AA%D9%88%D8%B1-%D9%86%D9%82%D8%A7%D8%B4-clipart-painting-house-painter-83edff1e54928b32.png">
+                <font>Painters</font>
+                <p>This site provide you an advance home service . You won't need to move anywhere everything will be at your door.</p>
+                <!--btn--------->
+                <a href="/home/painter">View</a>
+            </div>
+            <!--box-1-------->
+            <div class="box">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/61om8U5fuAL._AC_SY679_.jpg">
+                <font>Electricians</font>
+                <p>This site provide you an advance home service . You won't need to move anywhere everything will be at your door.</p>
+                <!--btn--------->
+                <a href="/home/electrician">View</a>
+            </div>
+
+            <div class="box">
+                <img src="https://www.vippng.com/png/detail/84-840256_hair-cut-hairstyle-buzz-razor-razor-hairdresser-tukang.png">
+                <font>Home tutor</font>
+                <p>This site provide you an advance home service . You won't need to move anywhere everything will be at your door.</p>
+                <!--btn--------->
+                <a href="/home/teacher">View</a>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<ul>
+  <li><a href="/home/carpenter/">carpenter</a></li>
+  <li><a href="#">driver</a></li>
+  <li><a href="#">electrician</a></li>
+  <li><a href="#">home_servant</a></li>
+  <li><a href="#">painter</a></li>
+  <li><a href="#">teacher</a></li>
+</ul>

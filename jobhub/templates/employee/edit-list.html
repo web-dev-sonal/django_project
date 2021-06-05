@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static '/css/newEmployee.css' %}">
+  </head>
+  <body>
+
+<!--
+    <h1>edit yourslef</h1>
+
+
+    <form class="" action="/home/carpenter/edit/" method="post">
+      {% for field in form %}
+      <div class="fieldWrapper">
+          {% csrf_token %}
+          <table>
+
+            <th>
+              {{ field.label_tag }}
+            </th>
+            <tr>
+              {{ field }}
+            </tr>
+
+            {% if field.help_text %}
+            <p class="help">{{ field.help_text|safe }}</p>
+            {% endif %}
+          </table>
+      </div>
+     {% endfor %}
+     <input type="hidden" name="id" value="{{ employee.id }}">
+     <input type="submit" name="" value="save">
+    </form>
+-->
+
+
+
+
+    <div >
+      <div class="head">
+        <h1>Edit Yourself</h1>
+      </div>
+      <form class="form" action="/home/{{category}}/edit/" method="post">
+         {% csrf_token %}
+         {% for field in form %}
+         <div class="fieldWrapper">
+              {{ field.errors }}
+              {% if field.help_text %}
+               <p class="help">{{ field.help_text|safe }}</p>
+              {% endif %}
+              {{ field }}
+
+         </div>
+        {% endfor %}
+         <input type="hidden" name="id" value="{{ employee.id }}">
+         <input type="submit" name="" value="save">
+         <input type="reset" name="" value="Reset">
+      </form>
+    </div>
+  </body>
+</html>

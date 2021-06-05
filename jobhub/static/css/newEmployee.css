@@ -1,0 +1,66 @@
+.form{
+  margin-left: 30%;
+  margin-right: 35%;
+  border: 2px solid green;
+  padding: 5%;
+}
+
+h1{
+  text-align: center;
+}
+
+body{
+  margin-top: 5%;
+  background-color: lightblue;
+}
+
+input[type=submit] {
+  background-color: orange;
+  padding: 2%;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+input[type=submit]:hover{
+  background-color: green;
+  color: white;
+}
+
+input[type=reset]{
+  background-color: red;
+  padding: 2%;
+  margin-left: 2%;
+  margin-top: 5%;
+}
+
+input[type=reset]:hover{
+  background-color: orange;
+  color: white;
+}
+
+h1{
+  font-style: oblique;
+}
+
+input[type=text]{
+  background-color: lightgreen;
+  border: 1px solid red;
+}
+
+input[type=number]{
+  background-color: lightgreen;
+  border: 1px solid red;
+}
+input[type=text]:hover{
+  background-color: cyan;
+}
+
+input[type=number]:hover{
+  background-color: cyan;
+}
+
+.head {
+  padding: 2%;
+  background-color: orange;
+  margin-bottom: 2%;
+}

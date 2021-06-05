@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static '/css/profile.css' %}">
+  </head>
+  <body>
+  
+
+
+    <div class="name">
+      <h1>Name</h1>
+      <h4>{{employee.name}}</h4>
+    </div>
+    <div class="address">
+      <h1>Address</h1>
+      <h4>state: {{employee.state}}</h4>
+      <h4>district: {{employee.dist}}</h4>
+
+      <h4>pincode: {{employee.pincode}}</h4>
+
+    </div>
+    <div class="contact">
+      <h1>contact</h1>
+      <h4>phone: {{employee.phone}}</h4>
+    </div>
+    <div class="description">
+      <h1>Description</h1>
+      <h4>experience: {{employee.experience}} year</h4>
+      <h4>fee per month: {{employee.fee}} rupees</h4>
+      <h4>vehicle drive: {{employee.vehicle}}</h4>
+    </div>
+  </body>
+</html>

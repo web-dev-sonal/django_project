@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+
+<!--
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> carpenters</title>
+  </head>
+
+  <link rel="stylesheet" href="{% static '/css/employees.css' %}">
+  <body>
+
+    <div class="">
+      <h1>add yourself </h1>
+      <button type="button" name="button"><a href="/home/carpenter/addList">click here</a></button>
+    </div>
+
+    <div class="">
+    {% for emp in employee %}
+      <p>{{emp.name}}</p>
+      <p>{{emp.fee}}</p>
+       <p><a href="/home/carpenter/editList?id={{ emp.id }}">edit</a></p>
+       <p><a href="/home/carpenter/deleteList?id={{ emp.id }}">delete</a></p>
+    {% endfor %}
+    </div>
+
+    </body>
+</html>
+-->
+
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marvel Slider</title>
+<link rel="stylesheet" href="{% static '/css/employees.css' %}">
+
+</head>
+<body>
+
+	<section class="main">
+        <!--navigation-->
+        <nav>
+
+
+            <ul class="menu">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/home/about">About</a></li>
+                <li><a href="/home/contact">Contact</a></li>
+
+                <li><a href="#">logout</a></li>
+
+            </ul>
+        </nav>
+    </section>
+
+
+	<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">We Are Professional workers</h1>
+    <p>Get the best and highly rated professsions workers here. We will help you to find the trusted worker to give their best for you.hand side of the screen. When a user clicks on one of those, I'd like to display the actual file/image on the right hand side of the screen. I am still new to Django and have used both ListView and DetailView separately, but not in such a combination. I'm not sure how this can be achieved.</p>
+
+  </div>
+</div>
+
+<div id="add">
+  <p>
+    Hi, if u are also interested to get job then join here
+  </p>
+  <h1>Add yourself </h1>
+  <button type="button" name="button"><a href="/home/{{category}}/addList">click here</a></button>
+</div>
+
+
+	<div class="container">
+
+		<!--slider------------------->
+		<ul id="autoWidth" class="cs-hidden"></ul>
+
+    {% for emp in employee %}
+
+    <li class="item-a">
+  	  <!--slider-box-->
+  		<div class="box">
+
+  		<!--model-->
+  		<img class="model" src="https://previews.123rf.com/images/vectorkif/vectorkif1809/vectorkif180900019/110172927-people-of-different-professions-set-of-twenty-one-poses-with-cartoon-characters-of-various-occupatio.jpg">
+  		<!--details-->
+  		<div class="details">
+
+        <p>{{emp.name}}</p>
+         <a href="/home/{{category}}/editList?id={{ emp.id }}">edit</a>
+         <a href="/home/{{category}}/deleteList?id={{ emp.id }}">delete</a>
+  			<a href="/home/{{category}}/viewProfile?id={{ emp.id }}">View profile</a>
+
+
+  		</div>
+
+  		</div>
+  		</li>
+
+      {% endfor %}
+
+ </div>
+
+
+<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>

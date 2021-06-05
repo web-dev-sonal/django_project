@@ -1,0 +1,17 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+  margin: 5% auto;
+}
+
+div{
+  font-style: italic;
+  border: 1px solid red;
+  margin: auto 35%;
+}
+/*
+.contact{
+  font-style: italic;
+  border: 1px solid red;
+  margin: auto 35%;
+}*/
